@@ -76,7 +76,7 @@ public class QaAutomationServiceImpl implements QaAutomationService {
         String apiMethodType = requestModal.getApiMethodType();
 
         testResultModel.setApiUrl(apiUrl);
-        testResultModel.setMethodType(apiMethodType);
+        testResultModel.setMethodType(apiMethodType.toUpperCase());
 
         baseResponse.setReturnCode(TestProcessCodeEnum.DEFAULT_SUCCESS_CODE.getCode());
         baseResponse.setReturnMessage(TestProcessMessageEnum.SUCCESS_AUTOMATION_TEST_MESSAGE.getMessage());
